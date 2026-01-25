@@ -69,11 +69,13 @@ This project is configured for seamless deployment on Vercel.
    - Add `JWT_SECRET` with a strong random string
    - Generate one: `openssl rand -base64 32`
 
-4. **Set up Vercel KV** (for production data storage):
+4. **Set up Upstash Redis** (for production data storage):
    - In Vercel dashboard, go to "Storage" → "Create Database"
-   - Select "KV" (Key-Value)
+   - Select "Upstash Redis" (or search for Redis in the marketplace)
    - Connect it to your project
-   - Vercel will automatically configure the KV environment variables
+   - Vercel will automatically configure the Redis environment variables:
+     - `UPSTASH_REDIS_REST_URL`
+     - `UPSTASH_REDIS_REST_TOKEN`
 
 5. **Deploy**:
    - Vercel will automatically build and deploy your application
@@ -93,7 +95,7 @@ The project includes `vercel.json` with optimized settings:
 
 ### Production Features
 
-- **Vercel KV**: User data is stored in Vercel KV in production
+- **Upstash Redis**: User data is stored in Upstash Redis in production
 - **File System Fallback**: Local development uses file-based storage
 - **Secure Cookies**: HTTP-only cookies with secure flag in production
 - **Environment Detection**: Automatically detects Vercel environment

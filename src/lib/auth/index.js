@@ -7,6 +7,14 @@ import { kv } from '@vercel/kv'
 // Helper to determine if we are in production/Vercel
 const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL === '1'
 
+// Initialize Redis client (only in production)
+const redis = isProduction && process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+    })
+    : null
+
 // Path to users.json for development fallback
 const USERS_FILE = path.join(process.cwd(), 'data', 'users.json')
 
@@ -21,12 +29,12 @@ const ensureDataDir = () => {
 
 // Helper to read users
 const readUsers = async () => {
-    if (isProduction) {
+    if (isProduction && redis) {
         try {
-            const users = await kv.get('users')
+            const users = await redis.get('users')
             return users || []
         } catch (error) {
-            console.error('Vercel KV error:', error)
+            console.error('Redis error:', error)
             return []
         }
     }
@@ -47,12 +55,12 @@ const readUsers = async () => {
 
 // Helper to write users
 const writeUsers = async (users) => {
-    if (isProduction) {
+    if (isProduction && redis) {
         try {
-            await kv.set('users', users)
+            await redis.set('users', users)
             return
         } catch (error) {
-            console.error('Vercel KV write error:', error)
+            console.error('Redis write error:', error)
             throw new Error('Database write failed')
         }
     }
