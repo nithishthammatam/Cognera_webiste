@@ -83,16 +83,16 @@ export default function SolutionSection() {
                 {/* Layer number badge positioned absolutely */}
                 <div className={`absolute -top-2 -right-2 w-7 h-7 rounded-full ${layer.bgColor} border-2 border-white/20 flex items-center justify-center shadow-lg`}>
                   <span className={`text-sm font-bold ${layer.iconColor}`} style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
-                    {layer.number}
-                  </span>
+                  {layer.number}
+                </span>
                 </div>
               </div>
               {/* Layer title section */}
               <div>
                 <div className="text-xs sm:text-sm text-white/60 mb-1 font-semibold uppercase tracking-wider">Layer {layer.number}</div>
                 <h3 className="text-2xl sm:text-3xl text-white font-bold group-hover:text-white transition-colors" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
-                  {layer.title}
-                </h3>
+                {layer.title}
+              </h3>
               </div>
             </div>
             

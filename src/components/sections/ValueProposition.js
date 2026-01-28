@@ -123,7 +123,7 @@ export default function ValueProposition({ title, items }) {
                   {/* Item description with hover color transition */}
                   <p className="text-base sm:text-lg leading-relaxed text-white/80 group-hover:text-white/90 transition-colors" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
                     {description}
-                  </p>
+          </p>
                 </div>
               </div>
             </div>

@@ -124,42 +124,62 @@ export default function PrivacyPage() {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#080707' }}>
+    <div className="min-h-screen" style={{ backgroundColor: 'transparent' }}>
       {/* Header Banner */}
-      <div className="w-full" style={{ marginTop: '100px', paddingTop: '20px' }}>
-        <h1 className="text-4xl font-bold text-white text-center" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>Privacy Policy</h1>
+      <div 
+        className="w-full relative"
+        style={{ 
+          marginTop: '20px',
+          paddingTop: '30px',
+          paddingBottom: '30px',
+          backgroundColor: 'transparent',
+          zIndex: 10
+        }}
+      >
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 relative" style={{ zIndex: 10 }}>
+          <h1 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-3 sm:mb-4 md:mb-6 leading-tight" 
+            style={{ fontFamily: 'var(--font-inter), sans-serif' }}
+          >
+            Privacy Policy
+          </h1>
+          {/* Last Updated Date */}
+          <p 
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 text-center" 
+            style={{ fontFamily: 'var(--font-inter), sans-serif' }}
+          >
+            Last updated on 2nd January 2026
+          </p>
+        </div>
       </div>
 
-      {/* Last Updated Date */}
-      <div className="w-full text-center" style={{ paddingTop: '8px' }}>
-        <p className="text-white/80" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>Last updated on 2nd January 2026</p>
-      </div>
+      {/* Combined Table of Contents and Content Section */}
+      <div className="w-full" style={{ marginTop: '0' }}>
+        <div className="flex flex-col md:flex-row" style={{ height: 'calc(100vh - 180px)' }}>
+          {/* Table of Contents Sidebar - Hidden on mobile */}
+          <aside className="hidden md:block w-64 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border-r-2 overflow-y-auto flex-shrink-0" style={{ borderColor: '#7440FA', borderRightWidth: '2px', height: 'calc(100vh - 180px)' }}>
+            <div className="p-6">
+              <h2 className="text-lg font-semibold text-white mb-4" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>Table of Contents</h2>
+              <nav className="space-y-1">
+                {tableOfContents.map((item, index) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className="toc-link block w-full text-left text-sm text-white/80 hover:text-[#7440FA] py-2 px-3 rounded transition-colors relative"
+                    style={{ fontFamily: 'var(--font-inter), sans-serif' }}
+                  >
+                    <span className="absolute left-0 top-0 bottom-0 w-1 bg-[#7440FA] opacity-0 transition-opacity"></span>
+                    {item.title}
+                  </button>
+                ))}
+              </nav>
+            </div>
+          </aside>
 
-      <div className="flex" style={{ height: 'calc(100vh - 240px)' }}>
-        {/* Table of Contents Sidebar */}
-        <aside className="w-64 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border-r-2 overflow-y-auto" style={{ borderColor: '#7440FA', borderRightWidth: '2px' }}>
-          <div className="p-6">
-            <h2 className="text-lg font-semibold text-white mb-4" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>Table of Contents</h2>
-            <nav className="space-y-1">
-              {tableOfContents.map((item, index) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="toc-link block w-full text-left text-sm text-white/80 hover:text-[#7440FA] py-2 px-3 rounded transition-colors relative"
-                  style={{ fontFamily: 'var(--font-inter), sans-serif' }}
-                >
-                  <span className="absolute left-0 top-0 bottom-0 w-1 bg-[#7440FA] opacity-0 transition-opacity"></span>
-                  {item.title}
-                </button>
-              ))}
-            </nav>
-          </div>
-        </aside>
-
-        {/* Main Content */}
-        <main className="flex-1" style={{ backgroundColor: '#080707', overflow: 'hidden' }}>
-          <div className="h-full pl-2 pr-4 py-4">
-            <div className="content-box bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-lg p-8 h-full overflow-y-auto" style={{ border: '2px solid #7440FA' }}>
+          {/* Main Content */}
+          <main className="flex-1 w-full md:w-auto" style={{ backgroundColor: '#080707', overflow: 'hidden', height: 'calc(100vh - 180px)' }}>
+            <div className="h-full pl-2 md:pl-2 pr-2 md:pr-4 py-4">
+              <div className="content-box bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-lg p-4 md:p-8 h-full overflow-y-auto" style={{ border: '2px solid #7440FA', maxHeight: '100%' }}>
               <div className="prose prose-lg max-w-none text-white/90">
               <p className="mb-4 text-justify" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>This Privacy Policy ("Policy") is published by COGNERA DATA LABS PRIVATE LIMITED, a company incorporated under the Companies Act, 2013, bearing CIN U62091TS2025PTC206136, and having its registered office at Kutbullapur,Hyderabad ("Company"). This Policy governs the manner in which our Company collects, receives, processes, stores, transmits, protects, uses, discloses, and retains data through its software development kits, applications, AI/ML products, cloud platforms, websites, and related technology solutions, including but not limited to our software development kit ("SDK" or "Services").</p>
 
@@ -392,9 +412,10 @@ export default function PrivacyPage() {
               <p className="mb-4 text-justify" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>Hyderabad, Telangna.</p>
               <p className="mb-4 text-justify" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>Email: privacy@ cognera.ai</p>
               </div>
-          </div>
+              </div>
+            </div>
+          </main>
         </div>
-        </main>
       </div>
     </div>
   )
