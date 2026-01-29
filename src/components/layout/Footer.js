@@ -134,6 +134,14 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
+            {/* Terms and Conditions link with hover effects */}
+            <Link 
+              href="/terms" 
+              className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-200 underline-offset-4 hover:underline"
+              style={{ fontFamily: 'var(--font-inter), sans-serif' }}
+            >
+              Terms and Conditions
+            </Link>
           </div>
         </div>
         
