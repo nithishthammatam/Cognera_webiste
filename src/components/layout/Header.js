@@ -48,110 +48,123 @@ export default function Header() {
                 style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
               >
                 Platform
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg 
+                  className={`w-4 h-4 transition-transform ${platformOpen ? 'rotate-180' : ''}`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               {platformOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-white/10 rounded-lg shadow-xl py-2 z-[202]">
-                  {/* AI / INTELLIGENCE SECTION */}
-                  <div className="px-4 py-2">
-                    <div className="text-xs font-semibold text-[#A78BFA] uppercase tracking-wider mb-2">AI / Intelligence</div>
+                <div className="absolute top-full left-0 mt-2 w-64 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-white/10 rounded-lg shadow-xl py-4 z-[202]">
+                  {/* AI / INTELLIGENCE Section */}
+                  <div className="mb-4">
+                    <h3 className="text-xs font-semibold text-[#A78BFA] uppercase mb-2 px-4" style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}>
+                      AI / INTELLIGENCE
+                    </h3>
                     <Link 
                       href="/platform/ai-behavior-engine"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       AI Behavior Engine
                     </Link>
                     <Link 
                       href="/platform/behavior-insight-layer"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Behavior Insight Layer
                     </Link>
                     <Link 
                       href="/platform/cognera-mcp"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Cognera MCP
                     </Link>
                   </div>
-                  
-                  {/* INSIGHTS SECTION */}
-                  <div className="px-4 py-2 border-t border-white/10">
-                    <div className="text-xs font-semibold text-[#A78BFA] uppercase tracking-wider mb-2">Insights</div>
+
+                  {/* INSIGHTS Section */}
+                  <div className="mb-4">
+                    <h3 className="text-xs font-semibold text-[#A78BFA] uppercase mb-2 px-4" style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}>
+                      INSIGHTS
+                    </h3>
                     <Link 
                       href="/platform/product-behavior-analytics"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Product Behavior Analytics
                     </Link>
                     <Link 
                       href="/platform/session-flow-analytics"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Session Flow Analytics
                     </Link>
                     <Link 
                       href="/platform/attention-distraction-mapping"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Attention & Distraction Mapping
                     </Link>
                     <Link 
                       href="/platform/behavior-cohorts"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Behavior Cohorts
                     </Link>
                   </div>
 
-                  {/* ACTION SECTION */}
-                  <div className="px-4 py-2 border-t border-white/10">
-                    <div className="text-xs font-semibold text-[#A78BFA] uppercase tracking-wider mb-2">Action</div>
+                  {/* ACTION Section */}
+                  <div className="mb-4">
+                    <h3 className="text-xs font-semibold text-[#A78BFA] uppercase mb-2 px-4" style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}>
+                      ACTION
+                    </h3>
                     <Link 
                       href="/platform/insight-driven-recommendations"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Insight-Driven Recommendations
                     </Link>
                     <Link 
                       href="/platform/experience-optimization-signals"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Experience Optimization Signals
                     </Link>
                   </div>
 
-                  {/* DATA & TRUST SECTION */}
-                  <div className="px-4 py-2 border-t border-white/10">
-                    <div className="text-xs font-semibold text-[#A78BFA] uppercase tracking-wider mb-2">Data & Trust</div>
+                  {/* DATA & TRUST Section */}
+                  <div>
+                    <h3 className="text-xs font-semibold text-[#A78BFA] uppercase mb-2 px-4" style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}>
+                      DATA & TRUST
+                    </h3>
                     <Link 
                       href="/platform/data-governance"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Data Governance
                     </Link>
                     <Link 
                       href="/platform/security-privacy"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Security & Privacy
                     </Link>
                     <Link 
                       href="/platform/integrations"
-                      className="block px-2 py-1.5 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm rounded"
+                      className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                       style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                     >
                       Integrations
@@ -183,42 +196,42 @@ export default function Header() {
                     className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                     style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                   >
-                    For Product Teams
+                    Product Teams
                   </Link>
                   <Link 
                     href="/solutions/for-marketing-teams"
                     className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                     style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                   >
-                    For Marketing Teams
+                    Marketing Teams
                   </Link>
                   <Link 
                     href="/solutions/for-engineering-teams"
                     className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                     style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                   >
-                    For Engineering Teams
+                    Engineering Teams
                   </Link>
                   <Link 
                     href="/solutions/for-executives"
                     className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                     style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                   >
-                    For Executives
+                    Executives
                   </Link>
                   <Link 
                     href="/solutions/for-data-analytics-teams"
                     className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                     style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                   >
-                    For Data & Analytics Teams
+                    Data & Analytics Teams
                   </Link>
                   <Link 
                     href="/solutions/for-privacy-compliance-teams"
                     className="block px-4 py-2 text-white hover:bg-white/10 hover:text-[#A78BFA] transition-colors text-sm"
                     style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
                   >
-                    For Privacy & Compliance Teams
+                    Privacy & Compliance Teams
                   </Link>
                 </div>
               )}

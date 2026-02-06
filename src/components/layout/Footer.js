@@ -123,28 +123,83 @@ export default function Footer() {
 
       {/* Footer Content - In Front (above animated brand name) */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Footer Links Section */}
-        <div className="text-center mb-6 sm:mb-8">
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {/* Privacy Policy link with hover effects */}
-            <Link 
-              href="/privacy" 
-              className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-200 underline-offset-4 hover:underline"
-              style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
-            >
-              Privacy Policy
-            </Link>
-            {/* Terms and Conditions link with hover effects */}
-            <Link 
-              href="/terms" 
-              className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-200 underline-offset-4 hover:underline"
-              style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
-            >
-              Terms and Conditions
-            </Link>
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 mb-4 sm:mb-6">
+          {/* Company Section */}
+          <div className="max-w-xs">
+            <h3 className="text-white text-sm sm:text-base font-semibold mb-2 sm:mb-3" style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}>
+              Company
+            </h3>
+            <nav className="flex flex-col gap-0.5 sm:gap-1">
+              <Link 
+                href="/about" 
+                className="text-gray-300 hover:text-white hover:bg-[#A78BFA]/20 transition-all duration-200 text-xs sm:text-sm px-2 py-1 rounded flex items-center justify-between group"
+                style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
+              >
+                <span>About Us</span>
+                <span className="text-gray-400 group-hover:text-white transition-colors text-xs">→</span>
+              </Link>
+              <Link 
+                href="/partner" 
+                className="text-gray-300 hover:text-white hover:bg-[#A78BFA]/20 transition-all duration-200 text-xs sm:text-sm px-2 py-1 rounded flex items-center justify-between group"
+                style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
+              >
+                <span>Become a Partner</span>
+                <span className="text-gray-400 group-hover:text-white transition-colors text-xs">→</span>
+              </Link>
+              <Link 
+                href="/experts" 
+                className="text-gray-300 hover:text-white hover:bg-[#A78BFA]/20 transition-all duration-200 text-xs sm:text-sm px-2 py-1 rounded flex items-center justify-between group"
+                style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
+              >
+                <span>Expert Directory</span>
+                <span className="text-gray-400 group-hover:text-white transition-colors text-xs">→</span>
+              </Link>
+              <Link 
+                href="/careers" 
+                className="text-gray-300 hover:text-white hover:bg-[#A78BFA]/20 transition-all duration-200 text-xs sm:text-sm px-2 py-1 rounded flex items-center justify-between group"
+                style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
+              >
+                <span>Careers</span>
+                <span className="text-gray-400 group-hover:text-white transition-colors text-xs">→</span>
+              </Link>
+              <Link 
+                href="/contact" 
+                className="text-gray-300 hover:text-white hover:bg-[#A78BFA]/20 transition-all duration-200 text-xs sm:text-sm px-2 py-1 rounded flex items-center justify-between group"
+                style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
+              >
+                <span>Contact Sales</span>
+                <span className="text-gray-400 group-hover:text-white transition-colors text-xs">→</span>
+              </Link>
+            </nav>
+          </div>
+
+          {/* Legal Section */}
+          <div className="max-w-xs">
+            <h3 className="text-white text-sm sm:text-base font-semibold mb-2 sm:mb-3" style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}>
+              Legal
+            </h3>
+            <nav className="flex flex-col gap-0.5 sm:gap-1">
+              <Link 
+                href="/privacy" 
+                className="text-gray-300 hover:text-white hover:bg-[#A78BFA]/20 transition-all duration-200 text-xs sm:text-sm px-2 py-1 rounded flex items-center justify-between group"
+                style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
+              >
+                <span>Privacy Policy</span>
+                <span className="text-gray-400 group-hover:text-white transition-colors text-xs">→</span>
+              </Link>
+              <Link 
+                href="/terms" 
+                className="text-gray-300 hover:text-white hover:bg-[#A78BFA]/20 transition-all duration-200 text-xs sm:text-sm px-2 py-1 rounded flex items-center justify-between group"
+                style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}
+              >
+                <span>Terms and Conditions</span>
+                <span className="text-gray-400 group-hover:text-white transition-colors text-xs">→</span>
+              </Link>
+            </nav>
           </div>
         </div>
         
+
         {/* Copyright Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16 xl:mb-20">
           <p className="text-gray-400 text-xs sm:text-sm" style={{ fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif' }}>
