@@ -150,7 +150,7 @@ export default function ContactSalesPage() {
               Talk to a digital productivity expert
             </h2>
             <p className="text-lg text-gray-600" style={{ fontFamily: 'var(--font-poppins), "Poppins", sans-serif' }}>
-              Want to see how Cognera can transform your workflow with advanced analytics? We'd love to chat.
+              Want to see how Cognera can transform your workflow with advanced analytics? We&apos;d love to chat.
             </p>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function ContactSalesPage() {
               Talk to a digital productivity expert
             </h3>
             <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base" style={{ fontFamily: 'var(--font-poppins), "Poppins", sans-serif' }}>
-              Want to see how Cognera can transform your workflow with advanced analytics and real-time insights? We'd love to chat.
+              Want to see how Cognera can transform your workflow with advanced analytics and real-time insights? We&apos;d love to chat.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -276,7 +276,7 @@ export default function ContactSalesPage() {
               <div className="space-y-3 pt-2">
                 <Checkbox
                   name="emailUpdates"
-                  label="I'd like to receive emails about news & updates from Cognera."
+                  label="I&apos;d like to receive emails about news & updates from Cognera."
                   checked={formData.emailUpdates}
                   onChange={handleChange}
                   isLight={true}
