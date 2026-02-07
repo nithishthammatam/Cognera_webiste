@@ -18,15 +18,15 @@ export default function CertificateModal({ certificate, isOpen, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+      className="fixed inset-0 z-[200] flex items-start justify-center p-4 pt-20 sm:pt-24 bg-black/80 backdrop-blur-sm overflow-y-auto"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-5xl max-h-[90vh] bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-white/20 rounded-xl shadow-2xl overflow-hidden"
+        className="relative w-full max-w-5xl max-h-[85vh] my-4 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-white/20 rounded-xl shadow-2xl overflow-hidden z-[201]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-white/10">
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-white/10 relative z-[202]">
           <h3
             className="text-xl sm:text-2xl font-semibold text-white"
             style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}
@@ -35,7 +35,7 @@ export default function CertificateModal({ certificate, isOpen, onClose }) {
           </h3>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors text-white hover:text-[#A78BFA]"
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors text-white hover:text-[#A78BFA] relative z-[203]"
             aria-label="Close modal"
           >
             <svg
