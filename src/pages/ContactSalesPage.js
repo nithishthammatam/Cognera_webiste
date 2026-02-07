@@ -121,7 +121,7 @@ export default function ContactSalesPage() {
   const benefits = [
     {
       title: 'Transform Your Workflow with Advanced Analytics',
-      description: 'Unlock digital productivity with Cognera\'s behavior intelligence framework. Get real-time insights that drive meaningful productivity gains and optimize your workflow.'
+      description: 'Unlock digital productivity with the Cognera behavior intelligence framework. Get real-time insights that drive meaningful productivity gains and optimize your workflow.'
     },
     {
       title: 'Understand Behavior Patterns & Flow States',
