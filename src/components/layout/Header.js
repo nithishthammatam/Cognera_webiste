@@ -28,15 +28,16 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] w-full">
       <div
-        className={`w-full backdrop-blur-md transition-all duration-300 ${isScrolled
-          ? 'bg-white/90 border-b border-gray-200 shadow-sm'
-          : 'bg-white/0 border-b border-transparent shadow-none'
+        className={`w-full transition-all duration-300 ${isScrolled
+          ? 'bg-white border-b border-gray-200 shadow-sm'
+          : 'bg-white border-b border-transparent shadow-none'
           }`}
+        style={{ backgroundColor: '#ffffff' }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 z-[203] hover:opacity-80 transition-opacity">
+          <Link href="/" className="flex items-center gap-2 z-[203] hover:opacity-80 transition-opacity">
             <img
               src="/img/Cognera_log_bg_removed.png"
               alt="Cognera Logo"
@@ -69,7 +70,7 @@ export default function Header() {
 
                 {/* Mega Menu Dropdown */}
                 {(link.name === 'Products' || link.name === 'Solutions' || link.name === 'Resources') && (
-                  <div className="fixed top-16 left-0 w-full bg-white shadow-xl border-t border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[200]">
+                  <div className="fixed top-16 left-0 w-full bg-white shadow-xl border-t border-gray-100 invisible group-hover:visible transition-all duration-300 z-[200]" style={{ backgroundColor: '#ffffff', opacity: 1 }}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
                       {link.name === 'Products' && (
                         <div className="grid grid-cols-12 gap-8">

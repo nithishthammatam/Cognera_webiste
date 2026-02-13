@@ -4,17 +4,17 @@ import Button from '@/components/ui/Button'
 
 export default function Hero({ title, subtitle }) {
   return (
-    <section className="hero text-center mb-0 px-4 relative overflow-hidden flex items-start justify-center min-h-[calc(100vh-80px)] pt-20 sm:pt-24 pb-0" style={{ position: 'relative', zIndex: 10 }}>
-      <div className="w-full relative z-10 flex flex-col items-center gap-8 max-w-4xl mx-auto">
+    <section className="hero text-center mb-0 px-4 relative overflow-hidden flex items-start justify-center min-h-[60vh] pt-12 sm:pt-16 pb-0" style={{ position: 'relative', zIndex: 10 }}>
+      <div className="w-full relative z-10 flex flex-col items-center gap-4 max-w-4xl mx-auto">
         {/* Centered Content */}
         <div className="w-full flex flex-col items-center text-center">
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#171123] mb-6 leading-tight font-bold pointer-events-auto"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#171123] mb-4 leading-tight font-bold pointer-events-auto"
           >
             {title || 'Privacy-First Behaviour Intelligence for Modern Apps'}
           </h1>
           {subtitle && (
-            <p className="text-xl sm:text-2xl text-[#4A4458] mb-8 max-w-2xl mx-auto leading-relaxed pointer-events-auto font-normal">
+            <p className="text-xl sm:text-2xl text-[#4A4458] mb-6 max-w-2xl mx-auto leading-relaxed pointer-events-auto font-normal">
               {subtitle}
             </p>
           )}

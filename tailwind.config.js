@@ -32,9 +32,10 @@ module.exports = {
         error: '#EF4444',
       },
       fontFamily: {
-        sans: ['var(--font-roboto)', 'sans-serif'], // Body text defaults to Roboto
-        header: ['var(--font-inter)', 'sans-serif'], // Headers use Inter
-        display: ['var(--font-inter)', 'sans-serif'],
+        sans: ['Gellix', 'var(--font-roboto)', 'sans-serif'], // Body text defaults to Gellix
+        header: ['Gellix', 'var(--font-inter)', 'sans-serif'], // Headers use Gellix
+        display: ['Gellix', 'var(--font-inter)', 'sans-serif'],
+        gellix: ['Gellix', 'sans-serif'],
       },
     },
   },

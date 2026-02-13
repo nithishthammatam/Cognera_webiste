@@ -2,6 +2,135 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Gellix Font Family */
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-SemiBoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-ExtraBoldItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix/Gellix-TRIAL-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   /* Colors */
   --purple-primary: #6F2DBD;
@@ -24,8 +153,9 @@
   --error: #EF4444;
 
   /* Fonts */
-  --font-header: var(--font-inter), -apple-system, sans-serif;
-  --font-body: var(--font-roboto), -apple-system, sans-serif;
+  --font-header: 'Gellix', var(--font-inter), -apple-system, sans-serif;
+  --font-body: 'Gellix', var(--font-roboto), -apple-system, sans-serif;
+  --font-gellix: 'Gellix', sans-serif;
 
   /* Spacing */
   --space-xs: 8px;
