@@ -21,7 +21,7 @@ const steps = [
     ),
     visual: (
       <div className="mt-5 rounded-lg border border-gray-200/60 p-3 font-mono text-xs" style={{ backgroundColor: '#FAFAFE' }}>
-        <div style={{ color: '#8B8696' }}>// Just two lines</div>
+        <div style={{ color: '#8B8696' }}>{'// Just two lines'}</div>
         <div><span style={{ color: '#6F2DBD' }}>import</span> <span style={{ color: '#171123' }}>Cognera</span> <span style={{ color: '#6F2DBD' }}>from</span> <span style={{ color: '#A663CC' }}>&apos;@cognera/sdk&apos;</span></div>
         <div><span style={{ color: '#171123' }}>Cognera</span>.<span style={{ color: '#6F2DBD' }}>init</span>(<span style={{ color: '#A663CC' }}>&apos;YOUR_KEY&apos;</span>)</div>
       </div>

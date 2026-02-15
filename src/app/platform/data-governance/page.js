@@ -195,7 +195,7 @@ export default function DataGovernancePage() {
         <section className="mb-16 sm:mb-20 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-4 font-bold" style={{ fontFamily: 'var(--font-roboto), "Roboto", sans-serif' }}>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-4 font-bold font-header">
                 Unlock the power of your data without compromise
               </h2>
             </div>

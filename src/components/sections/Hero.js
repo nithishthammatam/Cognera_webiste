@@ -52,7 +52,7 @@ function DashboardMockup() {
             {/* Top bar */}
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h3 className="text-sm font-bold" style={{ color: '#171123' }}>Overview Dashboard</h3>
+                <h3 className="text-sm font-bold font-sans" style={{ color: '#171123' }}>Overview Dashboard</h3>
                 <p className="text-[10px] text-gray-400">Last 7 days &middot; All users</p>
               </div>
               <div className="flex items-center gap-2">

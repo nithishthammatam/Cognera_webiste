@@ -32,9 +32,10 @@ module.exports = {
         error: '#EF4444',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
-        header: ['var(--font-inter)', 'sans-serif'],
-        display: ['var(--font-inter)', 'sans-serif'],
+        sans: ['var(--font-poppins)', 'Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        header: ['Times New Roman', 'Times', 'Georgia', 'serif'],
+        serif: ['Times New Roman', 'Times', 'Georgia', 'serif'],
+        display: ['Times New Roman', 'Times', 'Georgia', 'serif'],
       },
       animation: {
         'bounce-slow': 'bounce-slow 3s ease-in-out infinite',

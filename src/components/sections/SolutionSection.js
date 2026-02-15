@@ -24,7 +24,7 @@ export default function SolutionSection() {
 
         {/* Section Heading */}
         <div className="relative z-10 text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 font-sans tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 font-header tracking-tight text-white">
             The Behaviour Intelligence Framework
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-slate-300 leading-relaxed font-light">
