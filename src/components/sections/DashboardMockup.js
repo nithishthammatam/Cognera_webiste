@@ -17,16 +17,28 @@ function LightStatCard({ label, value, change }) {
 export default function DashboardMockup() {
     return (
         <div className="relative">
+            {/* Subtle shadow */}
             <div className="absolute -inset-4 bg-[#6F2DBD]/[0.04] rounded-3xl blur-2xl"></div>
+
+            {/* Main Dashboard Frame - WHITE card */}
             <div className="relative bg-white rounded-2xl shadow-xl shadow-gray-900/[0.08] border border-gray-200/60 overflow-hidden text-left">
+                {/* Sidebar + Content layout */}
                 <div className="flex">
+                    {/* Sidebar - Medium Width */}
                     <div className="hidden sm:flex flex-col w-40 border-r border-gray-100 bg-gray-50/50 p-3">
+                        {/* Sidebar logo area */}
                         <div className="flex items-center gap-2 mb-4 px-1">
                             <div className="w-8 h-8 relative flex-shrink-0">
-                                <img src="/img/Cognera_log_bg_removed.png" alt="Cognera" className="w-full h-full object-contain" />
+                                <img
+                                    src="/img/Cognera_log_bg_removed.png"
+                                    alt="Cognera"
+                                    className="w-full h-full object-contain"
+                                />
                             </div>
                             <span className="text-sm font-bold text-gray-800">Cognera</span>
                         </div>
+
+                        {/* Nav items */}
                         <div className="space-y-1">
                             <div className="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-[#6F2DBD]/[0.08] text-[#6F2DBD]">
                                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
@@ -46,7 +58,10 @@ export default function DashboardMockup() {
                             ))}
                         </div>
                     </div>
+
+                    {/* Main content area - Wide & Horizontal */}
                     <div className="flex-1 p-4">
+                        {/* Top bar */}
                         <div className="flex items-center justify-between mb-4">
                             <div>
                                 <h3 className="text-sm font-bold font-sans" style={{ color: '#171123' }}>Overview Dashboard</h3>
@@ -60,13 +75,19 @@ export default function DashboardMockup() {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Stat cards row - Grid cols 2 for wider horizontal cards */}
                         <div className="grid grid-cols-2 gap-3 mb-4">
                             <LightStatCard label="Active Users" value="162" change="+12.4%" />
                             <LightStatCard label="Avg. Screen Time" value="4m 32s" change="+8.2%" />
                             <LightStatCard label="Sessions" value="1,847" change="+23.1%" />
                             <LightStatCard label="Events" value="14.2K" change="+5.7%" />
                         </div>
+
+                        {/* Content Grid: Chart + Categories - Side-by-Side Horizontal Layout */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                            {/* Chart area - Takes up 2 columns - Reduced height to h-[100px] */}
                             <div className="md:col-span-2 border border-gray-100 rounded-xl p-3 flex flex-col justify-between h-[100px]">
                                 <div className="flex items-center justify-between">
                                     <div className="text-[10px] font-semibold" style={{ color: '#171123' }}>User Engagement</div>
@@ -92,6 +113,8 @@ export default function DashboardMockup() {
                                     <path d="M0,72 Q60,62 120,56 T240,44 T360,38 T400,42" fill="none" stroke="#A663CC" strokeWidth="1.5" strokeDasharray="4 2" />
                                 </svg>
                             </div>
+
+                            {/* Categories - Takes up 1 column (Vertical Stack) - Reduced height to h-[100px] */}
                             <div className="flex flex-col gap-2 justify-between h-[100px]">
                                 {['Social', 'Productivity', 'Entertainment'].map((cat, i) => (
                                     <div key={i} className="border border-gray-100 rounded-lg px-3 py-1 flex items-center justify-between h-[28px]">
